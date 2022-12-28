@@ -12,7 +12,9 @@ export default function TodoRoute() {
 
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Stuff I need to do</h1>
+      <div className="text-center">
+        <h1 className="text-5xl font-bold mt-0 mb-6">Stuff I need to Do</h1>
+      </div>
       <div>
         <Todos todos={todos} />
       </div>

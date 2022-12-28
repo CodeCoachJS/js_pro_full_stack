@@ -52,16 +52,15 @@ describe("Todos", () => {
       },
     ];
 
-    const { getByLabelText, getAllByRole } = render(<Todos todos={todos} />);
+    const { getAllByRole } = render(<Todos todos={todos} />);
 
-    let allTodos = getAllByRole("checkbox");
-    expect(allTodos.length).toBe(3);
+    let allRemoveButtons = getAllByRole("button");
+    expect(allRemoveButtons.length).toBe(3);
 
-    const checkbox = getByLabelText("Save world");
+    const firstButton = allRemoveButtons[0];
+    fireEvent(firstButton, new MouseEvent("click", { bubbles: true }));
 
-    fireEvent(checkbox, new MouseEvent("click", { bubbles: true }));
-
-    allTodos = getAllByRole("checkbox");
-    expect(allTodos.length).toBe(2);
+    allRemoveButtons = getAllByRole("button");
+    expect(allRemoveButtons.length).toBe(2);
   });
 });

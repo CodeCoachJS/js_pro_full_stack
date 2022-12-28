@@ -20,18 +20,25 @@ export default function Todos({ todos }: IProps): JSX.Element {
   }
 
   return (
-    <div>
-      {todoItems.map((item: Todo) => (
-        <div key={item.id}>
-          <label htmlFor={item.title}>{item.title}</label>
-          <input
-            id={item.title}
-            onChange={removeTodo.bind(null, item.id)}
-            type="checkbox"
-            checked={item.completed}
-          />
+    <div className="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
+      <div className="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+        <div className="mb-4">
+          {todoItems.map((item: Todo) => (
+            <div key={item.id}>
+              <div className="flex mb-4 items-center">
+                <p className="w-full text-grey-darkest">{item.title}</p>
+
+                <button
+                  onClick={removeTodo.bind(null, item.id)}
+                  className="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red"
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 }

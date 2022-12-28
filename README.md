@@ -43,11 +43,11 @@ Get the app runnng in your browser to begin and check out the ecommerce and todo
 
 The TODO app fetches some data from a 3rd party API and displays it on the screen.
 
-If a user clicks on a checkbox, the item disappears.
+If a user clicks on a `Remove Button`, the item disappears.
 
 There is a unit test but no e2e test! You need to write one.
 
-**Step 1:** Under `cypress/e2e` add another file `todox.cy.ts` and create an e2e test which confirms that todos disappear when a user clicks on them.
+**Step 1:** Under `cypress/e2e` add another file `todos.cy.ts` and create an e2e test which confirms that todos disappear when a user clicks on them.
 
 **Step 2:** Making actual calls to the API may not be the best idea especially since we may run up against rate limits. Can you use the `cypress/fixtures` to use mock data?
 

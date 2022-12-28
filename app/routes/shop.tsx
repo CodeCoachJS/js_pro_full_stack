@@ -11,7 +11,6 @@ export default function Shop() {
 
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to the Shop</h1>
       <ProductList items={items} />
     </div>
   );

@@ -25,6 +25,8 @@ Cypress.io is a popular testing framework for doing end-to-end tests (e2e). e2e 
 
 **Some of the pitfalls** of e2e is that tests can be brittle - meaning tests will often fail because of browser issues or the API taking a little longer than usual to respond or maybe a developer changed the placement of an element that you depend on for a test... whoops.
 
+**Here's a video walkthrough:** https://www.loom.com/share/ab74ef70735e482fb68ca231b0128fc3
+
 ---
 
 ### TODOS
